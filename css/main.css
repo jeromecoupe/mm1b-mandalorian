@@ -335,16 +335,6 @@ body {
   margin: 0 auto;
   padding: 0;
   max-width: 900px;
-}
-
-.bigquote__text {
-  margin: 0;
-  font-weight: 650;
-  font-size: clamp(38 / 16 * 1rem, 1rem + 6vw, 84 / 16 * 1rem);
-  line-height: 1.08;
-  text-transform: uppercase;
-  color: var(--color-white);
-  text-align: center;
 
   &::after {
     content: "";
@@ -368,6 +358,24 @@ body {
     &::after {
       width: 240px;
     }
+  }
+}
+
+.bigquote__text {
+  margin: 0;
+  font-weight: 600;
+  font-size: clamp(38 / 16 * 1rem, 1rem + 6vw, 84 / 16 * 1rem);
+  line-height: 1.08;
+  text-transform: uppercase;
+  color: var(--color-white);
+  text-align: center;
+
+  &::before {
+    content: open-quote;
+  }
+
+  &::after {
+    content: close-quote;
   }
 }
 
@@ -413,6 +421,8 @@ body {
   &:focus {
     text-decoration: underline;
     text-decoration-thickness: 1px;
+    text-decoration-skip-ink: all;
+    text-underline-offset: 0.12em;
   }
 }
 
