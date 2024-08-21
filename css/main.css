@@ -66,6 +66,7 @@
 
 html {
   font: 400 100%/1.5 var(--fontstack);
+  scroll-behavior: smooth;
 }
 
 /* ===============================
@@ -104,6 +105,7 @@ body {
   --header-padding: 24px;
 
   padding-block: var(--header-padding);
+  margin-block-end: 12vw;
 
   @media (width >= 750px) {
     --header-padding: 36px;
@@ -189,7 +191,6 @@ body {
 
 .intro {
   text-align: center;
-  margin-block-start: 12vw;
   margin-inline: auto;
   inline-size: min(100%, 70ch);
 }
