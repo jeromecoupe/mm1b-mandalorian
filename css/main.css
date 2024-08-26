@@ -42,10 +42,11 @@
   --color-text-secondary: var(--color-grey-600);
 
   --color-accent: hsl(36, 78%, 56%);
-  --color-accent-light: color-mix(in hsl, var(--color-accent), white 66%);
+  --color-accent-light: hsl(36, 78%, 84%);
   --color-accent-dark: color-mix(in hsl, var(--color-accent), black 16%);
 
-  --fontstack: "Supreme", "Helvetica Neue", system-ui, sans-serif;
+  --fontstack-alt: "Supreme", "Helvetica Neue", system-ui, sans-serif;
+  --fontstack-main: "Helvetica Neue", system-ui, sans-serif;
 }
 
 /* ===============================
@@ -63,7 +64,7 @@
 =============================== */
 
 html {
-  font: 400 100%/1.5 var(--fontstack);
+  font: 400 100%/1.5 var(--fontstack-main);
   scroll-behavior: smooth;
 }
 
@@ -135,6 +136,19 @@ body {
 }
 
 /* ===============================
+=logo
+=============================== */
+
+.logo {
+  width: 120px;
+  height: auto;
+
+  @media (width >= 1024px) {
+    width: 180px;
+  }
+}
+
+/* ===============================
 =main navigation
 =============================== */
 
@@ -153,6 +167,10 @@ body {
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
+    gap: 24px;
+  }
+
+  @media (width >= 1024px) {
     gap: 30px;
   }
 }
@@ -163,6 +181,7 @@ body {
   font-weight: 600;
   font-size: calc(14 / 16 * 1rem);
   line-height: 1.2;
+  font-family: var(--fontstack-alt);
   text-transform: uppercase;
   color: var(--color-text-primary);
   letter-spacing: 0.06em;
@@ -207,15 +226,15 @@ body {
 .intro {
   text-align: center;
   margin-inline: auto;
-  inline-size: min(100%, 75ch);
+  max-inline-size: 720px;
 }
 
 .intro__title {
   margin-block-end: calc(24 / 16 * 1rem);
-  font-weight: 600;
+  font-weight: 700;
   font-size: calc(18 / 16 * 1rem);
   line-height: 1.2;
-  font-family: var(--fontstack);
+  font-family: var(--fontstack-alt);
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: var(--color-accent);
@@ -227,8 +246,8 @@ body {
 }
 
 .intro__text {
-  font-size: clamp(18 / 16 * 1rem, 0.5rem + 1vw, 20 / 16 * 1rem);
-  font-weight: 450;
+  font-size: clamp(18 / 16 * 1rem, 1rem + 1vw, 20 / 16 * 1rem);
+  font-weight: 400;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.42);
   margin-block-end: calc(30 / 16 * 1rem);
 }
@@ -270,9 +289,10 @@ body {
   padding: var(--button-padding-block) var(--button-padding-inline);
   border: 1px solid var(--button-border-color);
 
-  font-weight: 550;
-  font-size: calc(14 / 16 * 1rem);
+  font-weight: 600;
+  font-size: 1rem;
   line-height: 1;
+  font-family: var(--fontstack-alt);
   text-transform: uppercase;
   color: var(--button-txt-color);
   text-decoration: none;
@@ -307,7 +327,7 @@ body {
 .h2,
 .h3 {
   font-weight: 500;
-  font-family: var(--fontstack);
+  font-family: var(--fontstack-alt);
   color: var(--color-accent);
   line-height: 1.2;
   margin-block-end: 0.5em;
@@ -401,6 +421,7 @@ body {
   font-weight: 600;
   font-size: clamp(38 / 16 * 1rem, 1rem + 6vw, 84 / 16 * 1rem);
   line-height: 1.08;
+  font-family: var(--fontstack-alt);
   text-transform: uppercase;
   color: var(--color-white);
   text-align: center;
@@ -444,7 +465,8 @@ body {
 
 .character__name {
   font-weight: 500;
-  font-size: calc(21 / 16 * 1rem);
+  font-size: calc(24 / 16 * 1rem);
+  font-family: var(--fontstack-alt);
   color: var(--color-accent);
   margin-block-end: calc(3 / 16 * 1rem);
 }
@@ -465,6 +487,7 @@ body {
 .character__cast {
   font-weight: 550;
   font-size: calc(14 / 16 * 1rem);
+  font-family: var(--fontstack-alt);
   text-transform: uppercase;
   color: var(--color-white);
   margin-block-end: calc(12 / 16 * 1rem);
@@ -489,7 +512,6 @@ body {
 
 .copyright {
   margin: 0;
-  font-size: calc(14 / 16 * 1rem);
 }
 
 /* ===============================
