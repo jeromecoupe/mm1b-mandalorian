@@ -3,7 +3,7 @@
 =============================== */
 
 @font-face {
-  font-family: "Work Sans";
+  font-family: "Supreme";
   src: url("../fonts/supreme-variable.woff2") format("woff2-variations");
   src: url("../fonts/supreme-variable.woff2") format("woff2") tech("variations");
   font-weight: 100 900;
@@ -12,7 +12,7 @@
 }
 
 @font-face {
-  font-family: "Work Sans";
+  font-family: "Supreme";
   src: url("../fonts/supreme-variable-italic.woff2") format("woff2-variations");
   src: url("../fonts/supreme-variable-italic.woff2") format("woff2")
     tech("variations");
