@@ -464,7 +464,7 @@ body {
 
 .character__cast {
   font-weight: 550;
-  font-size: calc(13 / 16 * 1rem);
+  font-size: calc(14 / 16 * 1rem);
   text-transform: uppercase;
   color: var(--color-white);
   margin-block-end: calc(12 / 16 * 1rem);
