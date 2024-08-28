@@ -402,9 +402,8 @@ a {
 =============================== */
 
 .bigquote {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
-  max-width: 900px;
 
   &::after {
     content: "";
@@ -668,6 +667,10 @@ a {
   @media (width >= 750px) {
     --container-padding: 30px;
   }
+}
+
+.container--small {
+  --container-max-size: 1024px;
 }
 
 /* ===============================
