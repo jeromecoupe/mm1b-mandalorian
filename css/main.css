@@ -46,7 +46,7 @@
   --color-accent-dark: color-mix(in hsl, var(--color-accent), black 16%);
 
   --fontstack-alt: "Supreme", "Helvetica Neue", system-ui, sans-serif;
-  --fontstack-main: "Helvetica Neue", system-ui, sans-serif;
+  --fontstack-main: system-ui, sans-serif;
 }
 
 /* ===============================
