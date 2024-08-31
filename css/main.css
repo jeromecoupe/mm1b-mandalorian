@@ -65,7 +65,10 @@
 
 html {
   font: 400 100%/1.5 var(--fontstack-main);
-  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
 }
 
 /* ===============================
