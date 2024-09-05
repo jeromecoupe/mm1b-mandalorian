@@ -94,6 +94,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
 
+  font-size: 1rem;
   color: var(--color-text-primary);
 
   @media (width >= 750px) {
@@ -104,7 +105,8 @@ body {
     background-image: url(../img/bkg_body_1500.jpg);
   }
 
-  @media (width >= 1600px) {
+  @media (width >= 1500px) {
+    font-size: calc(18 / 16 * 1rem);
     background-image: url(../img/bkg_body_1920.jpg);
   }
 }
@@ -163,6 +165,10 @@ a {
   }
 }
 
+.siteheader__logo > a {
+  display: block;
+}
+
 /* ===============================
 =logo
 =============================== */
@@ -198,10 +204,6 @@ a {
     justify-content: center;
     gap: 24px;
   }
-
-  @media (width >= 1024px) {
-    gap: 30px;
-  }
 }
 
 .mainnav__link {
@@ -212,11 +214,11 @@ a {
   line-height: 1.2;
   font-family: var(--fontstack-alt);
   text-transform: uppercase;
-  color: var(--color-white);
   letter-spacing: 0.036em;
   text-align: center;
   text-decoration: none;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.36);
+  color: var(--color-white);
 
   transition: color 0.2s ease-out;
 
