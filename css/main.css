@@ -19,6 +19,7 @@
 
   /* color variables (used in css) */
   --color-white: #ffffff;
+
   --color-background-primary: #3d2c2d;
   --color-text-primary: var(--color-grey-700);
   --color-text-secondary: var(--color-grey-600);
@@ -285,70 +286,31 @@ a {
 }
 
 /* ===============================
-=button group
-=============================== */
-
-.buttongroup {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: calc(12 / 16 * 1rem);
-
-  @media (width >= 750px) {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-/* ===============================
 =buttons
 =============================== */
 
 .button {
-  --button-txt-color: var(--color-white);
-  --button-txtactive-color: var(--color-white);
-  --button-border-color: var(--color-white);
-  --button-borderactive-color: rgba(255, 255, 255, 0.6);
-  --button-background-color: transparent;
-  --button-backgroundactive-color: transparent;
-
-  --button-padding-inline: calc(24 / 16 * 1rem);
-  --button-padding-block: calc(12 / 16 * 1rem);
-
   display: inline-block;
-  padding: var(--button-padding-block) var(--button-padding-inline);
-  border: 1px solid var(--button-border-color);
+  padding: calc(12 / 16 * 1rem) calc(24 / 16 * 1rem);
 
   font-weight: 600;
   font-size: 1rem;
   line-height: 1;
   font-family: var(--fontstack-alt);
   text-transform: uppercase;
-  color: var(--button-txt-color);
+  color: var(--color-grey-100);
   text-decoration: none;
-  background-color: var(--button-background-color);
+  background-color: var(--color-accent);
   letter-spacing: 0.036em;
+  border: 1px solid var(--color-accent);
 
-  transition: color 0.2s ease-out, border-color 0.2s ease-out,
-    background-color 0.2s ease-out;
+  transition: border-color 0.2s ease-out, background-color 0.2s ease-out;
 
   &:hover,
   &:focus {
-    background-color: var(--button-backgroundactive-color);
-    border-color: var(--button-borderactive-color);
-    color: var(--button-txtactive-color);
+    background-color: var(--color-accent-dark);
+    border-color: var(--color-accent-dark);
   }
-}
-
-.button--primary {
-  --button-txt-color: var(--color-grey-100);
-  --button-txtactive-color: var(--color-grey-100);
-  --button-border-color: var(--color-accent);
-  --button-borderactive-color: var(--color-accent-dark);
-  --button-background-color: var(--color-accent);
-  --button-backgroundactive-color: var(--color-accent-dark);
 }
 
 /* ===============================
@@ -421,30 +383,7 @@ a {
 .bigquote {
   margin: 0;
   padding: 0;
-
-  &::after {
-    content: "";
-    display: block;
-    width: 120px;
-    margin-inline: auto;
-    aspect-ratio: 16 / 9;
-    background: url(../img/img_bigquote.jpg) 50% 0 no-repeat;
-    background-size: cover;
-    margin-block-start: 2rem;
-    border-radius: var(--radius-small);
-  }
-
-  @media (width >= 750px) {
-    &::after {
-      width: 180px;
-    }
-  }
-
-  @media (width >= 1024px) {
-    &::after {
-      width: 240px;
-    }
-  }
+  text-align: center;
 }
 
 .bigquote__text {
@@ -455,20 +394,26 @@ a {
   font-family: var(--fontstack-alt);
   text-transform: uppercase;
   color: var(--color-text-primary);
-  text-align: center;
   text-wrap: balance;
 
-  &::before {
-    content: open-quote;
+  & p {
+    margin-block-end: calc(18 / 16 * 1rem);
   }
 
-  &::after {
-    content: close-quote;
+  & span {
+    color: var(--color-accent);
   }
 }
 
-.bigquote__text > span {
-  color: var(--color-accent);
+.bigquote__author {
+  font-weight: 500;
+  font-size: calc(14 / 16 * 1rem);
+  font-family: var(--fontstack-alt);
+  text-transform: uppercase;
+
+  &::before {
+    content: "— ";
+  }
 }
 
 /* ===============================
